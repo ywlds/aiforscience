@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI For Science - 科学人工智能</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-atom"></i>
+                <span>AI For Science</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">首页</a></li>
+                <li><a href="#about" class="nav-link">关于</a></li>
+                <li><a href="#applications" class="nav-link">应用领域</a></li>
+                <li><a href="#technologies" class="nav-link">技术</a></li>
+                <li><a href="#contact" class="nav-link">联系我们</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主页横幅 -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    AI For Science
+                    <span class="gradient-text">科学人工智能</span>
+                </h1>
+                <p class="hero-description">
+                    探索人工智能如何改变科学研究的方式，加速科学发现，推动人类知识边界的扩展
+                </p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">了解更多</a>
+                    <a href="#applications" class="btn btn-secondary">应用案例</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="element element-1"><i class="fas fa-dna"></i></div>
+                    <div class="element element-2"><i class="fas fa-atom"></i></div>
+                    <div class="element element-3"><i class="fas fa-microscope"></i></div>
+                    <div class="element element-4"><i class="fas fa-brain"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于部分 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">什么是 AI For Science？</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        AI For Science（科学人工智能）是将人工智能技术应用于科学研究各个领域的跨学科领域。
+                        它结合了机器学习、深度学习、数据科学等AI技术与物理学、化学、生物学、材料科学等传统科学学科，
+                        旨在加速科学发现过程，提高研究效率，并解决传统方法难以处理的复杂科学问题。
+                    </p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-rocket"></i>
+                            <h3>加速发现</h3>
+                            <p>AI可以快速分析大量数据，识别模式，加速科学发现过程</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>智能预测</h3>
+                            <p>通过机器学习模型预测材料性质、化学反应、蛋白质结构等</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-cogs"></i>
+                            <h3>自动化实验</h3>
+                            <p>AI驱动的自动化实验平台，提高实验效率和准确性</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 应用领域 -->
+    <section id="applications" class="applications">
+        <div class="container">
+            <h2 class="section-title">主要应用领域</h2>
+            <div class="applications-grid">
+                <div class="app-card">
+                    <div class="app-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>药物发现</h3>
+                    <p>AI加速药物分子设计，预测药物活性，优化药物筛选过程</p>
+                    <ul>
+                        <li>分子性质预测</li>
+                        <li>药物靶点识别</li>
+                        <li>ADMET性质预测</li>
+                    </ul>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>材料科学</h3>
+                    <p>AI预测材料性质，设计新型功能材料，加速材料开发</p>
+                    <ul>
+                        <li>材料性质预测</li>
+                        <li>晶体结构预测</li>
+                        <li>新材料设计</li>
+                    </ul>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>生物信息学</h3>
+                    <p>AI分析基因组数据，预测蛋白质结构，理解生物系统</p>
+                    <ul>
+                        <li>蛋白质结构预测</li>
+                        <li>基因功能预测</li>
+                        <li>生物网络分析</li>
+                    </ul>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>环境科学</h3>
+                    <p>AI监测环境变化，预测气候变化，优化资源管理</p>
+                    <ul>
+                        <li>气候建模</li>
+                        <li>污染监测</li>
+                        <li>生态系统分析</li>
+                    </ul>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>量子化学</h3>
+                    <p>AI加速量子化学计算，预测分子性质，优化化学反应</p>
+                    <ul>
+                        <li>势能面计算</li>
+                        <li>反应路径预测</li>
+                        <li>光谱预测</li>
+                    </ul>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>数据驱动科学</h3>
+                    <p>AI从大规模科学数据中提取知识，发现新的科学规律</p>
+                    <ul>
+                        <li>模式识别</li>
+                        <li>异常检测</li>
+                        <li>知识发现</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心技术 -->
+    <section id="technologies" class="technologies">
+        <div class="container">
+            <h2 class="section-title">核心技术</h2>
+            <div class="tech-content">
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="tech-info">
+                        <h3>机器学习</h3>
+                        <p>监督学习、无监督学习、强化学习在科学数据分析和预测中的应用</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="tech-info">
+                        <h3>深度学习</h3>
+                        <p>神经网络、卷积神经网络、循环神经网络在科学问题建模中的应用</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="tech-info">
+                        <h3>图神经网络</h3>
+                        <p>处理分子图、蛋白质结构、社交网络等图结构数据的专用网络</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="tech-info">
+                        <h3>自动化实验</h3>
+                        <p>机器人实验平台、高通量筛选、智能实验设计</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="tech-info">
+                        <h3>主动学习</h3>
+                        <p>智能选择最有价值的实验，最大化信息增益</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="tech-info">
+                        <h3>生成模型</h3>
+                        <p>生成对抗网络、变分自编码器在分子设计中的应用</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">联系我们</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>关于AI For Science</h3>
+                    <p>我们致力于推动AI在科学研究中的应用，促进跨学科合作，加速科学发现。</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@aiforscience.org</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+86 123 4567 8900</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>中国，北京</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="您的邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="您的消息" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">发送消息</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AI For Science</h3>
+                    <p>推动人工智能在科学研究中的应用，加速科学发现</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">关于</a></li>
+                        <li><a href="#applications">应用领域</a></li>
+                        <li><a href="#technologies">技术</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>关注我们</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI For Science. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
