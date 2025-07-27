@@ -397,6 +397,25 @@ section {
     font-weight: bold;
 }
 
+.app-image {
+    margin: 1rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.app-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.app-image:hover img {
+    transform: scale(1.05);
+}
+
 /* 技术部分 */
 .technologies {
     background: #f8fafc;
