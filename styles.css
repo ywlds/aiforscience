@@ -693,4 +693,99 @@ html {
 
 .fade-in-up {
     animation: fadeInUp 0.6s ease-out;
+}
+
+/* 视频展示部分样式 */
+.video-showcase {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.video-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-container:hover .video-overlay {
+    opacity: 1;
+}
+
+.play-button {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+    background: white;
+}
+
+.play-button i {
+    font-size: 2rem;
+    color: #2563eb;
+}
+
+.video-description {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.video-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* 响应式视频样式 */
+@media (max-width: 768px) {
+    .video-container {
+        margin: 0 20px 2rem;
+    }
+    
+    .play-button {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .play-button i {
+        font-size: 1.5rem;
+    }
+    
+    .video-description p {
+        font-size: 1rem;
+    }
 } 
