@@ -295,3 +295,196 @@ function handleSwipe() {
         }
     }
 } 
+
+// 搜索功能
+const searchInput = document.getElementById('search-input');
+const searchBtn = document.querySelector('.search-btn');
+
+if (searchInput && searchBtn) {
+    searchBtn.addEventListener('click', performSearch);
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+}
+
+function performSearch() {
+    const query = searchInput.value.toLowerCase().trim();
+    if (!query) return;
+    
+    // 搜索逻辑
+    const searchableElements = document.querySelectorAll('h1, h2, h3, p, li');
+    let found = false;
+    
+    searchableElements.forEach(element => {
+        const text = element.textContent.toLowerCase();
+        if (text.includes(query)) {
+            element.style.backgroundColor = 'rgba(37, 99, 235, 0.1)';
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            found = true;
+            setTimeout(() => {
+                element.style.backgroundColor = '';
+            }, 2000);
+        }
+    });
+    
+    if (!found) {
+        showNotification('未找到相关内容', 'error');
+    }
+}
+
+// 演示按钮功能
+document.querySelectorAll('.demo-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const demoType = this.getAttribute('data-demo');
+        showDemo(demoType);
+    });
+});
+
+function showDemo(demoType) {
+    const demos = {
+        'drug-discovery': {
+            title: '药物发现演示',
+            content: '展示AI如何预测分子活性，优化药物设计流程...',
+            features: ['分子性质预测', '靶点识别', 'ADMET预测']
+        },
+        'materials-science': {
+            title: '材料科学演示',
+            content: '展示AI如何预测材料性质，设计新型功能材料...',
+            features: ['晶体结构预测', '材料性质计算', '新材料设计']
+        },
+        'bioinformatics': {
+            title: '生物信息学演示',
+            content: '展示AI如何分析基因组数据，预测蛋白质结构...',
+            features: ['蛋白质结构预测', '基因功能分析', '生物网络建模']
+        },
+        'quantum-chemistry': {
+            title: '量子化学演示',
+            content: '展示AI如何加速量子化学计算，预测分子性质...',
+            features: ['势能面计算', '反应路径预测', '光谱预测']
+        }
+    };
+    
+    const demo = demos[demoType];
+    if (demo) {
+        showDemoModal(demo);
+    }
+}
+
+function showDemoModal(demo) {
+    const modal = document.createElement('div');
+    modal.className = 'demo-modal';
+    modal.innerHTML = `
+        <div class="demo-modal-content">
+            <div class="demo-modal-header">
+                <h3>${demo.title}</h3>
+                <button class="demo-modal-close">&times;</button>
+            </div>
+            <div class="demo-modal-body">
+                <p>${demo.content}</p>
+                <div class="demo-features">
+                    <h4>主要功能：</h4>
+                    <ul>
+                        ${demo.features.map(feature => `<li>${feature}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="demo-actions">
+                    <button class="btn btn-primary">开始演示</button>
+                    <button class="btn btn-secondary">了解更多</button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // 添加样式
+    modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    `;
+    
+    const content = modal.querySelector('.demo-modal-content');
+    content.style.cssText = `
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        max-width: 500px;
+        width: 90%;
+        max-height: 80vh;
+        overflow-y: auto;
+        transform: scale(0.8);
+        transition: transform 0.3s ease;
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // 显示动画
+    setTimeout(() => {
+        modal.style.opacity = '1';
+        content.style.transform = 'scale(1)';
+    }, 10);
+    
+    // 关闭功能
+    const closeBtn = modal.querySelector('.demo-modal-close');
+    closeBtn.addEventListener('click', () => {
+        modal.style.opacity = '0';
+        content.style.transform = 'scale(0.8)';
+        setTimeout(() => {
+            document.body.removeChild(modal);
+        }, 300);
+    });
+    
+    // 点击背景关闭
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeBtn.click();
+        }
+    });
+}
+
+// 数字计数动画
+function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                counter.textContent = target;
+                clearInterval(timer);
+            } else {
+                counter.textContent = Math.floor(current);
+            }
+        }, 16);
+    });
+}
+
+// 观察统计部分
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+const statisticsSection = document.querySelector('.statistics');
+if (statisticsSection) {
+    statsObserver.observe(statisticsSection);
+} 

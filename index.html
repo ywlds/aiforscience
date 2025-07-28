@@ -23,6 +23,10 @@
                 <li><a href="#technologies" class="nav-link">技术</a></li>
                 <li><a href="#contact" class="nav-link">联系我们</a></li>
             </ul>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="搜索内容..." class="search-input">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -91,6 +95,31 @@
         </div>
     </section>
 
+    <!-- 数据统计 -->
+    <section id="statistics" class="statistics">
+        <div class="container">
+            <h2 class="section-title">AI For Science 影响力</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">研究项目</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">合作机构</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="1000">0</div>
+                    <div class="stat-label">发表论文</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">专利技术</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 视频展示部分 -->
     <section id="video-showcase" class="video-showcase">
         <div class="container">
@@ -122,6 +151,7 @@
                         <li>药物靶点识别</li>
                         <li>ADMET性质预测</li>
                     </ul>
+                    <button class="demo-btn" data-demo="drug-discovery">查看演示</button>
                 </div>
                 <div class="app-card">
                     <div class="app-icon">
@@ -137,6 +167,7 @@
                         <li>晶体结构预测</li>
                         <li>新材料设计</li>
                     </ul>
+                    <button class="demo-btn" data-demo="materials-science">查看演示</button>
                 </div>
                 <div class="app-card">
                     <div class="app-icon">
@@ -152,6 +183,7 @@
                         <li>基因功能预测</li>
                         <li>生物网络分析</li>
                     </ul>
+                    <button class="demo-btn" data-demo="bioinformatics">查看演示</button>
                 </div>
        
                 <div class="app-card">
@@ -168,6 +200,7 @@
                         <li>反应路径预测</li>
                         <li>光谱预测</li>
                     </ul>
+                    <button class="demo-btn" data-demo="quantum-chemistry">查看演示</button>
                 </div>
                 <div class="app-card">
                     <div class="app-icon">
